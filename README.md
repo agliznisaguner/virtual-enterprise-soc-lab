@@ -75,7 +75,6 @@ Used Wireshark and pfSense's packet capture to inspect traffic between VMs and i
 
 ## 📸 Screenshots
 
-*(Add lab screenshots here, e.g. `/screenshots` folder — Wazuh dashboard, Nmap scan output, Splunk alerts, pfSense firewall rules, DNSBL blocked-page test.)*
 
 ```
 ![Wazuh Dashboard](./screenshots/wazuh-dashboard.png)
@@ -88,9 +87,4 @@ Used Wireshark and pfSense's packet capture to inspect traffic between VMs and i
 - [pfSense Documentation](https://docs.netgate.com/pfsense/en/latest/)
 - [Wazuh Documentation](https://documentation.wazuh.com/current/index.html)
 - [Splunk Documentation](https://docs.splunk.com/Documentation)
-- [TryHackMe](https://tryhackme.com)
-- [Hack The Box](https://hackthebox.com)
 
----
-
-*Built as part of ongoing hands-on cybersecurity/SOC practice, complementing hands-on learning on TryHackMe and Hack The Box.*
