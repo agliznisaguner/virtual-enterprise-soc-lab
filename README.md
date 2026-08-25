@@ -73,7 +73,7 @@ Used Wireshark and pfSense's packet capture to inspect traffic between VMs and i
 - End-to-end pentest experience: recon → vulnerability identification → exploitation → post-exploitation
 - Reinforced how centralized log correlation is essential for fast incident detection in a SOC context
 
-## Lab Architecture & Implementation Gallery
+## Implementation Gallery
 
 ### 1. Network & Firewall Configuration (pfSense)
 
