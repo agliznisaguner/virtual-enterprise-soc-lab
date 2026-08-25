@@ -73,14 +73,81 @@ Used Wireshark and pfSense's packet capture to inspect traffic between VMs and i
 - End-to-end pentest experience: recon → vulnerability identification → exploitation → post-exploitation
 - Reinforced how centralized log correlation is essential for fast incident detection in a SOC context
 
-## 📸 Screenshots
+## Lab Architecture & Implementation Gallery
 
+### 1. Network & Firewall Configuration (pfSense)
 
-```
-![Wazuh Dashboard](./screenshots/wazuh-dashboard.png)
-![Nmap Scan](./screenshots/nmap-scan.png)
-![Splunk Alert Config](./screenshots/splunk-alert.png)
-```
+* **RFC 1918 Alias Configuration**  
+  Centralized alias configuration on pfSense defining private IPv4 address blocks (RFC 1918).
+  ![pfSense RFC1918 Alias](./screenshots/01-pfsense-rfc1918-alias-configuration.png)
+
+* **Security Interface Rules**  
+  Firewall rule definition governing outbound traffic for the SECURITY interface to local subnets and the internet.
+  ![pfSense Security Rules](./screenshots/02-pfsense-firewall-security-rules.png)
+
+* **pfBlockerNG-devel Package Installation**  
+  Successful deployment of the pfBlockerNG-devel package via pfSense Package Manager.
+  ![pfSense pfBlockerNG Installation](./screenshots/03-pfsense-package-installer-pfblockerng.png)
+
+* **DNSBL Groups Overview**  
+  pfBlockerNG DNSBL (DNS-based Blackhole List) management dashboard and ADs_Basic group configuration.
+  ![pfSense DNSBL Groups](./screenshots/04-pfsense-pfblockerng-dnsbl-groups.png)
+
+* **EasyList & EasyPrivacy Source Definitions**  
+  Integration of external EasyList and EasyPrivacy feeds with Unbound DNS for automated ad/malicious domain blocking.
+  ![pfSense DNSBL Feeds](./screenshots/05-pfsense-pfblockerng-easylist-feeds.png)
+
+* **Custom Domain Blacklist**  
+  Configuration of granular domain-level blocks using DNSBL Custom List definitions.
+  ![pfSense DNSBL Custom Blacklist](./screenshots/06-pfsense-pfblockerng-custom-blacklist.png)
+
+---
+
+### 2. Test Environment & DNS Configuration
+
+* **Metasploitable2 Target Virtual Machine**  
+  Metasploitable2 vulnerable Linux virtual machine deployed as an attack and log analysis target.
+  ![Metasploitable2 Target VM](./screenshots/07-virtualbox-metasploitable2-target-vm.png)
+
+* **Ubuntu DNS Configuration (systemd-resolved)**  
+  Managing and updating upstream DNS resolver settings on the Ubuntu host using `resolvectl`.
+  ![Ubuntu DNS Configuration](./screenshots/08-ubuntu-dns-resolvectl-configuration.png)
+
+---
+
+### 3. SIEM Deployment (Splunk)
+
+* **Splunk Enterprise CLI Installation**  
+  Debian package (`.deb`) installation and administrative provisioning of Splunk Enterprise via terminal.
+  ![Splunk CLI Installation](./screenshots/09-ubuntu-splunk-installation-cli.png)
+
+* **Splunk Web Management Console**  
+  Splunk Enterprise management interface accessed via port 8000 after successful startup.
+  ![Splunk Web Home](./screenshots/10-splunk-web-interface-home.png)
+
+---
+
+### 4. EDR / XDR Deployment & Security Monitoring (Wazuh)
+
+* **Wazuh Dashboard Service Status**  
+  Verification of the active `wazuh-dashboard.service` daemon status on the central server.
+  ![Wazuh Dashboard Service](./screenshots/11-ubuntu-wazuh-dashboard-service-status.png)
+
+* **Wazuh Agent Service Status**  
+  Wazuh endpoint agent (`wazuh-agent.service`) actively running and transmitting telemetry from the Kali Linux host.
+  ![Wazuh Agent Status](./screenshots/12-wazuh-agent-service-status.png)
+
+* **Wazuh Active Agents Overview**  
+  Centralized dashboard displaying enrolled active agents, including the Kali Linux endpoint (`TarrAgent`).
+  ![Wazuh Agents Overview](./screenshots/13-wazuh-dashboard-agents-overview.png)
+
+* **Agent Security & Compliance Metrics**  
+  Detailed agent view outlining MITRE ATT&CK tactical alerts, SCA benchmarks, and PCI DSS compliance posture.
+  ![Wazuh Agent Security Overview](./screenshots/14-wazuh-agent-security-dashboard.png)
+
+* **MITRE ATT&CK T1078 (Valid Accounts) Event Logs**  
+  Ingested security events and PAM login session logs classified under MITRE technique T1078.
+  ![Wazuh MITRE T1078 Detection](./screenshots/15-wazuh-mitre-t1078-valid-accounts.png)
 
 ## 📚 References
 
