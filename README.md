@@ -79,27 +79,27 @@ Used Wireshark and pfSense's packet capture to inspect traffic between VMs and i
 
 * **RFC 1918 Alias Configuration**  
   Centralized alias configuration on pfSense defining private IPv4 address blocks (RFC 1918).
-  ![pfSense RFC1918 Alias](./screenshots/01-pfsense-rfc1918-alias-configuration.png)
+  ![pfSense RFC1918 Alias](./screenshots/01-pfsense-rfc1918-alias-configuration.jpg)
 
 * **Security Interface Rules**  
   Firewall rule definition governing outbound traffic for the SECURITY interface to local subnets and the internet.
-  ![pfSense Security Rules](./screenshots/02-pfsense-firewall-security-rules.png)
+  ![pfSense Security Rules](./screenshots/02-pfsense-firewall-security-rules.jpg)
 
 * **pfBlockerNG-devel Package Installation**  
   Successful deployment of the pfBlockerNG-devel package via pfSense Package Manager.
-  ![pfSense pfBlockerNG Installation](./screenshots/03-pfsense-package-installer-pfblockerng.png)
+  ![pfSense pfBlockerNG Installation](./screenshots/03-pfsense-package-installer-pfblockerng.jpg)
 
 * **DNSBL Groups Overview**  
   pfBlockerNG DNSBL (DNS-based Blackhole List) management dashboard and ADs_Basic group configuration.
-  ![pfSense DNSBL Groups](./screenshots/04-pfsense-pfblockerng-dnsbl-groups.png)
+  ![pfSense DNSBL Groups](./screenshots/04-pfsense-pfblockerng-dnsbl-groups.jpg)
 
 * **EasyList & EasyPrivacy Source Definitions**  
   Integration of external EasyList and EasyPrivacy feeds with Unbound DNS for automated ad/malicious domain blocking.
-  ![pfSense DNSBL Feeds](./screenshots/05-pfsense-pfblockerng-easylist-feeds.png)
+  ![pfSense DNSBL Feeds](./screenshots/05-pfsense-pfblockerng-easylist-feeds.jpg)
 
 * **Custom Domain Blacklist**  
   Configuration of granular domain-level blocks using DNSBL Custom List definitions.
-  ![pfSense DNSBL Custom Blacklist](./screenshots/06-pfsense-pfblockerng-custom-blacklist.png)
+  ![pfSense DNSBL Custom Blacklist](./screenshots/06-pfsense-pfblockerng-custom-blacklist.jpg)
 
 ---
 
@@ -107,11 +107,10 @@ Used Wireshark and pfSense's packet capture to inspect traffic between VMs and i
 
 * **Metasploitable2 Target Virtual Machine**  
   Metasploitable2 vulnerable Linux virtual machine deployed as an attack and log analysis target.
-  ![Metasploitable2 Target VM](./screenshots/07-virtualbox-metasploitable2-target-vm.png)
-
+  ![Metasploitable2 Target VM](./screenshots/07-virtualbox-metasploitable2-target-vm.jpg)
 * **Ubuntu DNS Configuration (systemd-resolved)**  
   Managing and updating upstream DNS resolver settings on the Ubuntu host using `resolvectl`.
-  ![Ubuntu DNS Configuration](./screenshots/08-ubuntu-dns-resolvectl-configuration.png)
+  ![Ubuntu DNS Configuration](./screenshots/08-ubuntu-dns-resolvectl-configuration.jpg)
 
 ---
 
@@ -119,11 +118,11 @@ Used Wireshark and pfSense's packet capture to inspect traffic between VMs and i
 
 * **Splunk Enterprise CLI Installation**  
   Debian package (`.deb`) installation and administrative provisioning of Splunk Enterprise via terminal.
-  ![Splunk CLI Installation](./screenshots/09-ubuntu-splunk-installation-cli.png)
+  ![Splunk CLI Installation](./screenshots/09-ubuntu-splunk-installation-cli.jpg)
 
 * **Splunk Web Management Console**  
   Splunk Enterprise management interface accessed via port 8000 after successful startup.
-  ![Splunk Web Home](./screenshots/10-splunk-web-interface-home.png)
+  ![Splunk Web Home](./screenshots/10-splunk-web-interface-home.jpg)
 
 ---
 
@@ -131,23 +130,23 @@ Used Wireshark and pfSense's packet capture to inspect traffic between VMs and i
 
 * **Wazuh Dashboard Service Status**  
   Verification of the active `wazuh-dashboard.service` daemon status on the central server.
-  ![Wazuh Dashboard Service](./screenshots/11-ubuntu-wazuh-dashboard-service-status.png)
+  ![Wazuh Dashboard Service](./screenshots/11-ubuntu-wazuh-dashboard-service-status.jpg)
 
 * **Wazuh Agent Service Status**  
   Wazuh endpoint agent (`wazuh-agent.service`) actively running and transmitting telemetry from the Kali Linux host.
-  ![Wazuh Agent Status](./screenshots/12-wazuh-agent-service-status.png)
+  ![Wazuh Agent Status](./screenshots/12-wazuh-agent-service-status.jpg)
 
 * **Wazuh Active Agents Overview**  
   Centralized dashboard displaying enrolled active agents, including the Kali Linux endpoint (`TarrAgent`).
-  ![Wazuh Agents Overview](./screenshots/13-wazuh-dashboard-agents-overview.png)
+  ![Wazuh Agents Overview](./screenshots/13-wazuh-dashboard-agents-overview.jpg)
 
 * **Agent Security & Compliance Metrics**  
   Detailed agent view outlining MITRE ATT&CK tactical alerts, SCA benchmarks, and PCI DSS compliance posture.
-  ![Wazuh Agent Security Overview](./screenshots/14-wazuh-agent-security-dashboard.png)
+  ![Wazuh Agent Security Overview](./screenshots/14-wazuh-agent-security-dashboard.jpg)
 
 * **MITRE ATT&CK T1078 (Valid Accounts) Event Logs**  
   Ingested security events and PAM login session logs classified under MITRE technique T1078.
-  ![Wazuh MITRE T1078 Detection](./screenshots/15-wazuh-mitre-t1078-valid-accounts.png)
+  ![Wazuh MITRE T1078 Detection](./screenshots/15-wazuh-mitre-t1078-valid-accounts.jpg)
 
 ## 📚 References
 
